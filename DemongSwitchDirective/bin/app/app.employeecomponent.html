@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+<button (click)="show()">Show</button>
+<button (click)="doget()">GET</button>
+<div [ngSwitch]="data">
+<span *ngSwitchCase="0">Nothig clicked </span>
+<span *ngSwitchCase="1">Show clicked </span>
+<span *ngSwitchCase="2"> GET clicked </span>
+</div>
+
+<!-- We can do like this too -->
+<!-- <button on-click='onClick()'>Click Me</button> -->
+
+</body>
+</html>
