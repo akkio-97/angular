@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <input [value]='empId' (input)='empId=$event.target.value' /> -->
+<!-- Is Equal to Event binding() & property binding -->
+<input [(ngModel)]='empId' />
+<input [(ngModel)]='empName' />
+<input [(ngModel)]='empSalary' />
+<div>
+Employee Id is {{empId}} Name is {{empName}} & Salary is {{empSalary}}
+</div>
+
+</body>
+</html>
