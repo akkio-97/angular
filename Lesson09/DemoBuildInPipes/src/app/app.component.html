@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>SALARY</th>
+<th>DEPARTMENT</th>
+<th>DOJ</th>
+</tr>
+<tr *ngFor="let emp of employess" >
+<td>{{emp.empId}}</td>
+<td>{{emp.empName |uppercase | slice:1:3}}</td> <!-- Channing pipes & passing parameter --> 
+<td>{{emp.empSal | currency:'USD':true}}</td> <!-- Currency pipes --> 
+<td>{{emp.empDep}}</td>
+<td>{{emp.empjoiningdate | date:'fullDate'|uppercase}}</td> <!-- Dates pipes channing pipes --> 
+
+</tr>
+</table>
+</body>
+</html>
