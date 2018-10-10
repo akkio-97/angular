@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Enter Details</h1>
+
+<table border="1 px">
+<tr>
+<th>Flight Number </th>
+<td><input [(ngModel)]="flightNo" /></td>
+</tr>
+<tr>
+<th>Customer Name </th>
+<td><input  [(ngModel)]="name" /></td>
+</tr>
+<tr>
+<th>Flight Name </th>
+<td><input  [(ngModel)]="flightName" /></td>
+</tr>
+<tr>
+<th>Source </th>
+<td> <input ty [(ngModel)]="source" /></td>
+<tr>
+<th>Destination </th>
+<td> <input  [(ngModel)]="destination" /></td>
+</tr>
+<tr>
+<th>Price </th> 
+<td><input  [(ngModel)]="price" /></td>
+</tr>
+</table>
+<br>
+<input type="submit" value="Submit" (click)="insert()"/>
+
+
+
+</body>
+</html>

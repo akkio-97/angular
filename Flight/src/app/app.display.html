@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Flight Details</h3>
+
+<table border="1 px">
+
+<th><a href (click)="sortTable('flightNo')">Flight ID</a></th>
+<th><a href (click)="sortTable('name')">Passanger Name</a></th>
+<th><a href (click)="sortTable('flightName')">Flight Name</a></th>
+<th><a href (click)="sortTable('source')">Source</a></th>
+<th><a href (click)="sortTable('destination')">Destination</a></th>
+<th><a href (click)="sortTable('price')">Price</a></th>
+
+<tr>
+<td><input  [(ngModel)]="flightNo" (focus)="action(find,column)" (ngModelChange)="search('flightNo')" placeholder="flightNo" /></td>
+<td><input  [(ngModel)]="name" (focus)="action(find,column)" (ngModelChange)="search('name')"  placeholder="name" /></td>
+<td><input  [(ngModel)]="flightName" (focus)="action(find,column)" (ngModelChange)="search('flightName')" placeholder="flightName" /></td>
+<td><input  [(ngModel)]="source" (focus)="action(find,column)" (ngModelChange)="search('source')" placeholder="source" /></td>
+<td><input  [(ngModel)]="destination" (focus)="action(find,column)" (ngModelChange)="search('destination')" placeholder="destination" /></td>
+<td><input  [(ngModel)]="price" (focus)="action(find,column)" (ngModelChange)="search('price')"  placeholder="price" /></td>
+</tr>
+
+<tr *ngFor = "let fl of flight | searchPipe : find : column | sortPipe : path : order">
+<td>{{fl.flightNo}}</td>
+<td>{{fl.name}}</td>
+<td>{{fl.flightName}}</td>
+<td>{{fl.source}}</td>
+<td>{{fl.destination}}</td>
+<td>{{fl.price | currency:'USD'}}</td>
+</tr>
+
+
+
+
+</table>
+
+<input type="submit" (click)="action()" />
+
+</body>
+</html>
